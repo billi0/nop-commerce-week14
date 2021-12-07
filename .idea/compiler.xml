@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Wk14-nop-commerce" />
+        <module name="nop-commerce-week14" />
         <module name="Wk14-nop-commerce-demo" />
       </profile>
     </annotationProcessing>

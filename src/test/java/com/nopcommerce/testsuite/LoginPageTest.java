@@ -15,19 +15,19 @@ public class LoginPageTest extends TestBase {
     HomePage homePage;
     LoginPage loginPage;
 
-    @BeforeMethod
+    @BeforeMethod(groups = {"smoke","sanity", "regression"})
     public void inIt(){
         homePage = new HomePage();
         loginPage = new LoginPage();
     }
 
-    @Test
+    @Test(groups = {"smoke", "regression"})
     public void userShouldNavigateToLoginPageSuccessFully(){
         homePage.clickOnLogInLink();
         loginPage.verifyWelcomeMessage();
 
     }
-    @Test
+    @Test(groups = {"sanity", "regression"})
     @Parameters({"email","password"})
     public void verifyTheErrorMessageWithInValidCredentials(String email,String password ){
         homePage.clickOnLogInLink();
@@ -38,7 +38,7 @@ public class LoginPageTest extends TestBase {
         loginPage.verifyErrorMessage();
 
     }
-    @Test
+    @Test(groups = {"sanity", "regression"})
     @Parameters({"email1","password1"})
     public void verifyThatUserShouldLogInSuccessFullyWithValidCredentials( String email1,String password1){
         homePage.clickOnLogInLink();
@@ -47,7 +47,7 @@ public class LoginPageTest extends TestBase {
         loginPage.clickOnLoginButton();
         loginPage.verifyLogOutOption();
     }
-    @Test
+    @Test(groups = {"regression"})
     @Parameters({"email1","password1"})
     public void VerifyThatUserShouldLogOutSuccessFully(String email1,String password1){
 

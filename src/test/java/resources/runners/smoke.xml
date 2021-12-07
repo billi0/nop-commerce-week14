@@ -11,7 +11,11 @@
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     </listeners>
-    <test name="Sanity Test" >
+    <test name="Smoke Test" >
+        <parameter name="email" value="prime@gmail.com"></parameter>
+        <parameter name="password" value="prime123"></parameter>
+        <parameter name="email1" value="tiapatel@gmail.com"></parameter>
+        <parameter name="password1" value="Prime123"></parameter>
         <classes>
             <class name="com.nopcommerce.testsuite.RegisterPageTest"></class>
             <class name="com.nopcommerce.testsuite.LoginPageTest"/>
